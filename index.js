@@ -42,6 +42,8 @@ const productos = [
         precio: 15,
     }
 ];
+
+let listaDeseos = [];
 let totalGastado = 0;
 while (opciones !== 4) {
 
@@ -153,13 +155,20 @@ while (opciones !== 4) {
 
     }
 
-    opciones = prompt("1-Compra Fernet\n2-Compra Cerveza\n3-Compra Vino\n4- Salir")
+    opciones = prompt("1-Compra Fernet\n2-Compra Cerveza\n3-Compra Vino\n4- Salir\n5-Que producto deseas que incorporemos a nuestros catalogo?")
     opciones = parseInt(opciones);
     if (opciones === 4) {
         alert("Total Gastado:\n" + totalGastado);
         alert("Gracias por su visita");
-
-
-
+        break;
     }
+
+    else if (opciones === 5) {
+        let producto = prompt("Ingrese el producto que desea agregar a la lista de deseos");
+        listaDeseos.push(producto);
+        alert("Producto agregado a la lista de deseos: " + producto);
+    } else {
+    }
+
 }
+
